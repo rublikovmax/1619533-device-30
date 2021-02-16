@@ -13,11 +13,12 @@
   <header>
     <nav>
       <a class="logo-header">
-        <img class="logo-header-image" src="https://via.placeholder.com/164x35" width="164" height="35" alt="Логотип магазина «Девайс»"/>
+        <img class="logo-header-image" src="img/logo-header.svg" width="163" height="35" alt="Логотип магазина «Девайс»"/>
       </a>
 
       <div class="personal-menu-and-search">
         <form action="#" method="post">
+          <span class="search-icon"></span>
           <label for="search-field">Поиск по сайту</label>
           <input type="search" id="search-field" placeholder="Поиск по сайту">
           <input type="submit" value="Найти">
@@ -84,7 +85,7 @@
         <li class="promo-slide-item">
           <h3 class="visually-hidden">Длинная палка для селфи</h3>
           <div class="promo-slide-image-block">
-            <img class="promo-slide-image" src="https://via.placeholder.com/384x486" width="384" height="486" alt="Палка для селфи"/>
+            <img class="promo-slide-image" src="img/promo-slider/selfie-stick.png" width="384" height="486" alt="Палка для селфи"/>
           </div>
           <div class="promo-slide-about-block">
             <p class="promo-slide-number">01</p>
@@ -111,7 +112,7 @@
         <li class="promo-slide-item">
           <h3 class="visually-hidden">Мотивирующий фитнес-браслет</h3>
           <div class="promo-slide-image-block">
-            <img class="promo-slide-image" src="https://via.placeholder.com/345x485" width="345" height="485" alt="Мотивирующий фитнес-браслет"/>
+            <img class="promo-slide-image" src="img/promo-slider/fitness-watch.png" width="345" height="483" alt="Мотивирующий фитнес-браслет"/>
           </div>
           <div class="promo-slide-about-block">
             <p class="promo-slide-number">02</p>
@@ -134,7 +135,7 @@
         <li class="promo-slide-item">
           <h3 class="visually-hidden">Квадрокоптер с лазером</h3>
           <div class="promo-slide-image-block">
-            <img class="promo-slide-image" src="https://via.placeholder.com/526x334" width="526" height="334" alt="Квадрокоптер с лазером"/>
+            <img class="promo-slide-image" src="img/promo-slider/drone-with-laser.png" width="526" height="334" alt="Квадрокоптер с лазером"/>
           </div>
           <div class="promo-slide-about-block">
             <p class="promo-slide-number">03</p>
@@ -177,7 +178,9 @@
           <a href="#">
             <h3 class="catalog-part-name">Виртуальная<br>
               реальность</h3>
-            <img class="catalog-part-image" src="https://via.placeholder.com/160x160" width="160" height="160" alt="Виртуальная реальность"/>
+            <div class="catalog-parts-image-block">
+              <img class="catalog-part-image" src="img/product-categories/vr.svg" width="97" height="55" alt="Виртуальная реальность"/>
+            </div>
           </a>
         </li>
 
@@ -185,14 +188,18 @@
           <a href="#">
             <h3 class="catalog-part-name">Моноподы<br>
               для селфи</h3>
-            <img class="catalog-part-image" src="https://via.placeholder.com/160x160" width="160" height="160" alt="Моноподы для селфи"/>
+            <div class="catalog-parts-image-block">
+              <img class="catalog-part-image" src="img/product-categories/selfie-monopodes.svg" width="86" height="117" alt="Моноподы для селфи"/>
+            </div>
           </a>
         </li>
 
         <li class="catalog-parts-item">
           <a href="#">
             <h3 class="catalog-part-name">Экшн-камеры</h3>
-            <img class="catalog-part-image" src="https://via.placeholder.com/160x160" width="160" height="160" alt="Экшн-камеры"/>
+            <div class="catalog-parts-image-block">
+              <img class="catalog-part-image" src="img/product-categories/action-cameras.svg" width="71" height="87" alt="Экшн-камеры"/>
+            </div>
           </a>
         </li>
 
@@ -200,21 +207,27 @@
           <a href="#">
             <h3 class="catalog-part-name">Фитнес-<br>
               браслеты</h3>
-            <img class="catalog-part-image" src="https://via.placeholder.com/160x160" width="160" height="160" alt="Фитнес браслеты"/>
+            <div class="catalog-parts-image-block">
+              <img class="catalog-part-image" src="img/product-categories/bracelets.svg" width="107" height="65" alt="Фитнес браслеты"/>
+            </div>
           </a>
         </li>
 
         <li class="catalog-parts-item">
           <a href="#">
             <h3 class="catalog-part-name">Умные часы</h3>
-            <img class="catalog-part-image" src="https://via.placeholder.com/160x160" width="160" height="160" alt="Умные часы"/>
+            <div class="catalog-parts-image-block">
+              <img class="catalog-part-image" src="img/product-categories/watches.svg" width="56" height="98" alt="Умные часы"/>
+            </div>
           </a>
         </li>
 
         <li class="catalog-parts-item">
           <a href="#">
             <h3 class="catalog-part-name">Квадрокоптеры</h3>
-            <img class="catalog-part-image" src="https://via.placeholder.com/160x160" width="160" height="160" alt="Квадрокоптеры"/>
+            <div class="catalog-parts-image-block">
+              <img class="catalog-part-image" src="img/product-categories/drones.svg" width="132" height="69" alt="Квадрокоптеры"/>
+            </div>
           </a>
         </li>
       </ul>
@@ -243,7 +256,7 @@
               заработаем, поднимая его на ваш этаж.</p>
           </div>
           <div class="service-slide-image-block">
-            <img class="service-slide-image" src="https://via.placeholder.com/136x164" width="136" height="164" alt="Доставка"/>
+            <img class="service-slide-image" src="img/service-slider/delivery.svg" width="136" height="164" alt="Доставка"/>
           </div>
         </li>
 
@@ -255,7 +268,7 @@
               Товар, не дом, конечно же.</p>
           </div>
           <div class="service-slide-image-block">
-            <img class="service-slide-image" src="https://via.placeholder.com/171x195" width="171" height="195" alt="Гарантия"/>
+            <img class="service-slide-image" src="img/service-slider/warranty.svg" width="171" height="195" alt="Гарантия"/>
           </div>
         </li>
 
@@ -267,7 +280,7 @@
               условия кредита. Выгодные для нашего банка, разумеется.</p>
           </div>
           <div class="service-slide-image-block">
-            <img class="service-slide-image" src="https://via.placeholder.com/156x188" width="156" height="188" alt="Кредит"/>
+            <img class="service-slide-image" src="img/service-slider/credit.svg" width="156" height="188" alt="Кредит"/>
           </div>
         </li>
       </ul>
@@ -278,19 +291,19 @@
       <ul class="brand-list">
         <li class="brand-item">
           <h3>dji</h3>
-          <img class="brand-image" src="https://via.placeholder.com/260x100" width="260" height="100" alt="dji">
+          <img class="brand-image grayscale" src="img/brands/dji.png" width="260" height="100" alt="dji">
         </li>
         <li class="brand-item">
           <h3>sr gadgets</h3>
-          <img class="brand-image" src="https://via.placeholder.com/260x100" width="260" height="100" alt="sr gadgets">
+          <img class="brand-image grayscale" src="img/brands/sr-gadgets.png" width="260" height="100" alt="sr gadgets">
         </li>
         <li class="brand-item">
           <h3>gopro</h3>
-          <img class="brand-image" src="https://via.placeholder.com/260x100" width="260" height="100" alt="gopro">
+          <img class="brand-image grayscale" src="img/brands/gopro.png" width="260" height="100" alt="gopro">
         </li>
         <li class="brand-item">
           <h3>vive</h3>
-          <img class="brand-image" src="https://via.placeholder.com/260x100" width="260" height="100" alt="vive">
+          <img class="brand-image grayscale" src="img/brands/vive.png" width="260" height="100" alt="vive">
         </li>
       </ul>
     </section>
@@ -315,7 +328,7 @@
         <p class="contacts-text">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете<br>
           проверить работоспособность покупки. Всякое бывает.</p>
         <a href="#">
-          <img class="map-image" src="https://via.placeholder.com/560x222" width="560" height="222" alt="Схема проезда"/>
+          <img class="map-image" src="img/map.png" width="560" height="222" alt="Схема проезда"/>
         </a>
         <button class="contact-us" type="button" value="contact us">Напишите нам</button>
       </div>
@@ -326,7 +339,7 @@
     <section class="personal-data">
       <h2 class="visually-hidden">Личный кабинет</h2>
       <a class="logo-footer">
-        <img class="logo-footer-image" src="https://via.placeholder.com/164x35" width="164" height="35" alt="Логотип магазина «Девайс»"/>
+        <img class="logo-footer-image" src="img/logo-footer.svg" width="163" height="35" alt="Логотип магазина «Девайс»"/>
       </a>
 
       <ul class="personal-data-list">
@@ -379,7 +392,7 @@
         <li class="social-network-item"><a class="social-network-icon twitter" href="#" title="Мы в Твиттере"></a></li>
       </ul>
       <a class="html-academy-logo" href="https://htmlacademy.ru/intensive/htmlcss">
-        <img class="html-academy-logo-image" src="http://via.placeholder.com/27x34" width="27" height="34" alt="Логотип html академии">
+        <img class="html-academy-logo-image" src="img/logo-html.svg" width="27" height="34" alt="Логотип html академии">
       </a>
     </section>
   </footer>
