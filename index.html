@@ -1,17 +1,20 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
 <head>
   <meta charset="utf-8">
   <title>Магазин «Девайс»</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/180.png">
   <link rel="manifest" href="manifest.webmanifest">
 </head>
 
-<body>
-  <header>
-    <nav>
+<body class="page-body">
+  <header class="main-header">
+    <nav class="main-navigation">
       <span class="logo-header">
         <img class="logo-header-image" src="img/logo-header.svg" width="163" height="35" alt="Логотип магазина «Девайс»"/>
       </span>
@@ -61,7 +64,7 @@
             <a href="catalog.html">Каталог товаров</a>
             <span class="plus-symbol"></span>
           </p>
-          <ul class="sub-menu-list">
+          <ul class="sub-men u-list">
             <li class="sub-menu-item"><a href="#">Виртуальная реальность</a></li>
             <li class="sub-menu-item"><a href="#">Моноподы для селфи</a></li>
             <li class="sub-menu-item"><a href="#">Экшн-камеры</a></li>
@@ -77,7 +80,7 @@
     </nav>
   </header>
 
-  <main>
+  <main class="container">
     <h1 class="visually-hidden">Интернет-магазин «Девайс»</h1>
     <section class="promo-slider">
       <h2 class="visually-hidden">Промо-слайдер</h2>
@@ -335,7 +338,7 @@
     </section>
   </main>
 
-  <footer>
+  <footer class="main-footer">
     <section class="personal-data">
       <h2 class="visually-hidden">Личный кабинет</h2>
       <span class="logo-footer">
@@ -397,9 +400,9 @@
     </section>
   </footer>
 
-  <section>
+  <section class="modal">
     <h2 class="visually-hidden">Форма обратной связи</h2>
-    <form action="https://echo.htmlacademy.ru/" method="post">
+    <form class="feedback-form" action="https://echo.htmlacademy.ru/" method="post">
       <p>
         <label for="name-field">Ваше имя:</label>
         <input id="name-field" type="text" name="name" placeholder="Имя Фамилия"/>
