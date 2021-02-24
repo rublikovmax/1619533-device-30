@@ -59,11 +59,48 @@
   --pink-light: #F6DADA;
 }
 
-/*Global*/
+/*Font-family settings*/
+
+.page-body,
+.contact-us-button,
+.submit-button {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: 800;
+}
+
+.promo-slide-features-table {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: 300;
+}
+
+.modal-field {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: 400;
+}
+
+.personal-menu-and-search,
+.sub-menu-list,
+.promo-slide-description,
+.service-slide-description,
+.about-text,
+.contacts-text,
+.personal-data-list,
+.address,
+.phone {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: 300;
+}
+
+/*Link settings*/
+
+.link {
+  text-decoration: none;
+}
 
 /*Main navigation*/
 
 .personal-data-list,
-.main-menu-list {
-  list-style: none ;
+.main-menu-list,
+.sub-menu-list {
+  list-style: none;
 }
