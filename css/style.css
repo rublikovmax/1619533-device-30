@@ -91,16 +91,85 @@
   font-weight: 300;
 }
 
-/*Link settings*/
+/*Global*/
+
+.page-body {
+  width: 1160px;
+  margin: 0;
+  padding: 0;
+  color: var(--basic-black);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
 
 .link {
   text-decoration: none;
+  color: var(--basic-black);
 }
-
-/*Main navigation*/
 
 .personal-data-list,
 .main-menu-list,
-.sub-menu-list {
+.sub-menu-list,
+.promo-slide-list,
+.promo-slide-button-list,
+.catalog-parts-list,
+.service-slide-button-list,
+.service-slide-list,
+.brand-list,
+.transport-company-list,
+.footer-menu-list,
+.social-network-list {
   list-style: none;
 }
+
+/*.personal-menu-and-search {*/
+/*  font-size: 15px;*/
+/*  line-height: 20px;*/
+/*}*/
+
+.personal-data-item {
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.personal-data-item .link:hover,
+.personal-data-item .link:focus {
+  opacity: 0.6;
+}
+
+.personal-data-item .link:active {
+  opacity: 0.3;
+}
+
+.log-out-button {
+  border: none;
+  background: transparent;
+  padding: inherit;
+  font-weight: inherit;
+  color: inherit;
+}
+
+.log-out-button:hover,
+.log-out-button:focus {
+  opacity: 0.6;
+}
+
+.log-out-button:active {
+  opacity: 0.3;
+}
+
+.main-menu-list {
+  font-size: 18px;
+  line-height: 22px;
+  text-transform: uppercase;
+}
+
+.sub-menu-list {
+  font-size: 15px;
+  line-height: 20px;
+  text-transform: none;
+}
+
