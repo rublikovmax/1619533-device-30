@@ -36,6 +36,8 @@
 
 :root {
   --basic-black: #000000;
+  --basic-black-hover: rgba(0,0,0,0.6);
+  --basic-black-active: rgba(0,0,0,0.3);
   --basic-dark: #363636;
   --basic-grey: #464646;
   --basic-half-grey: #7E7E7E;
@@ -98,6 +100,7 @@
   margin: 0;
   padding: 0;
   color: var(--basic-black);
+  background-color: #ffefd5; /*debug-background*/
 }
 
 img {
@@ -125,10 +128,55 @@ img {
   list-style: none;
 }
 
-/*.personal-menu-and-search {*/
-/*  font-size: 15px;*/
-/*  line-height: 20px;*/
-/*}*/
+/*Search form in header*/
+
+.search-field {
+  font-size: 15px;
+  line-height: 20px;
+  color: var(--basic-black);
+  opacity: 0.3;
+  background-color: transparent;
+  border: none;
+}
+
+.search-field:hover {
+  opacity: 0.6;
+}
+
+.search-field:focus {
+  opacity: 1;
+  border-bottom: 2px solid var(--basic-black);
+}
+
+.search-field::placeholder {
+  color: var(--basic-black);
+}
+
+.search-button {
+  font-size: 15px;
+  line-height: 20px;
+  color: var(--basic-black);
+  text-transform: uppercase;
+  text-align: center;
+  background-color: transparent;
+  width: 84px;
+  height: 50px;
+  box-sizing: border-box;
+  border: 2px solid var(--basic-black);
+  padding: 13px 15px;
+}
+
+.search-button:hover,
+.search-button:focus {
+  color: var(--basic-white);
+  background-color: var(--basic-black);
+}
+
+.search-button:active .search-button-text {
+  opacity: 0.3;
+}
+
+/*Personal menu in header*/
 
 .personal-data-item {
   font-size: 15px;
@@ -145,11 +193,11 @@ img {
 }
 
 .log-out-button {
+  font-weight: inherit;
+  color: inherit;
   border: none;
   background: transparent;
   padding: inherit;
-  font-weight: inherit;
-  color: inherit;
 }
 
 .log-out-button:hover,
@@ -161,15 +209,189 @@ img {
   opacity: 0.3;
 }
 
-.main-menu-list {
+/*Main menu in header*/
+
+.main-menu-item > a {
   font-size: 18px;
   line-height: 22px;
   text-transform: uppercase;
+  letter-spacing: 0.2em;
 }
 
-.sub-menu-list {
+.sub-menu-item {
   font-size: 15px;
   line-height: 20px;
   text-transform: none;
 }
 
+.main-menu-list .link:hover,
+.main-menu-list .link:focus {
+  opacity: 0.6;
+}
+
+.main-menu-list .link:active {
+  opacity: 0.3;
+}
+
+/*Promo slider*/
+
+.promo-slide-number {
+  font-size: 179px;
+  line-height: 219px;
+  color: var(--basic-white);
+  margin: 0;
+}
+
+.promo-slide-slogan {
+  font-size: 47px;
+  line-height: 58px;
+  margin: 0;
+}
+
+.promo-slide-description {
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.promo-slide-details-link {
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+
+}
+
+.promo-slide-details-link:hover,
+.promo-slide-details-link:focus {
+  /*background settings*/
+}
+
+.promo-slide-details-link:active .promo-slide-link-text {
+  color: var(--basic-black-active);
+}
+
+.promo-slide-features-table th {
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 15px;
+}
+
+.promo-slide-features-table td {
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 42px;
+  letter-spacing: 0.1em;
+}
+
+/*Catalog overview in index.html*/
+
+.catalog-parts-item h3 {
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.05em;
+}
+
+.catalog-parts-item:active h3 {
+  opacity: 0.3;
+}
+
+/*Services slider*/
+
+.service-slide-button {
+  font-weight: inherit;
+  color: inherit;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: transparent;
+  box-sizing: border-box;
+  width: 277px;
+  height: 40px;
+  border: none;
+  padding: 9px 136px 9px 19px;
+}
+
+.service-slide-button:hover,
+.service-slide-button:focus {
+  /*background settings*/
+}
+
+.service-slide-button:active,
+.service-slide-button.selected {
+  color: var(--special-yellow-light);
+  background-color: var(--basic-black);
+  background-image: none;
+}
+
+.service-slide-name {
+  font-size: 47px;
+  line-height: 58px;
+  letter-spacing: 0.2em;
+  margin: 0;
+}
+
+.service-slide-description {
+  font-size: 15px;
+  line-height: 30px;
+  letter-spacing: 0.1em;
+}
+
+/*About and contacts*/
+
+.about-and-contacts h2 {
+  font-size: 47px;
+  line-height: 58px;
+  letter-spacing: 0.2em;
+  margin: 0;
+}
+
+.about-text,
+.contacts-text {
+  font-size: 15px;
+  line-height: 28px;
+}
+
+.transport-company-item {
+  font-size: 16px;
+  line-height: 28px;
+}
+
+.about-details-link {
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+
+}
+
+.about-details-link:hover,
+.about-details-link:focus {
+  /*background settings*/
+}
+
+.about-details-link:active .about-details-link-text {
+  color: var(--basic-black-active);
+}
+
+.contact-us-button {
+  font-weight: inherit;
+  color: inherit;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: none;
+  padding: inherit;
+}
+
+.contact-us-button:hover,
+.contact-us-button:focus {
+  /*background settings*/
+}
+
+.contact-us-button:active {
+  color: var(--basic-black-active);
+}
