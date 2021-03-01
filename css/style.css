@@ -46,6 +46,7 @@
   --basic-white: #FFFFFF;
 
   --basic-filter-grey: #DCDCDC;
+  --basic-filter-disabled: #A6A6A6;
   --bacis-range-grey: #C4C4C4;
   --basic-product-grey: rgba(238, 238, 238, 0.7);
 
@@ -71,7 +72,8 @@
   font-weight: 800;
 }
 
-.promo-slide-features-table {
+.promo-slide-features-table,
+.product-price {
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 300;
 }
@@ -90,7 +92,12 @@
 .personal-data-list,
 .footer-personal-data-list,
 .address,
-.phone {
+.phone,
+.bread-crumbs-list,
+.color-field-list,
+.bluetooth-field-list,
+.sort-type-button-list,
+.add-to-compare-button {
   font-family: "Open Sans", "Arial", sans-serif;
   font-weight: 300;
 }
@@ -98,8 +105,8 @@
 /*Global*/
 
 .page-body {
-  width: 1160px;
-  margin: 0;
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 0;
   color: var(--basic-black);
   background-color: #f7eadb; /*debug-background*/
@@ -132,7 +139,14 @@ textarea {
 .brand-list,
 .transport-company-list,
 .footer-menu-list,
-.social-network-list {
+.social-network-list,
+.bread-crumbs-list,
+.color-field-list,
+.bluetooth-field-list,
+.sort-type-button-list,
+.sort-direction-button-list,
+.product-list,
+.page-link-list {
   list-style: none;
 }
 
@@ -228,6 +242,7 @@ textarea {
   line-height: 20px;
   font-weight: inherit;
   color: inherit;
+  opacity: 0.3;
   border: none;
   background: transparent;
   padding: inherit;
@@ -239,7 +254,7 @@ textarea {
 }
 
 .log-out-button:active {
-  opacity: 0.3;
+  opacity: 1;
 }
 
 /*Main menu in header*/
@@ -266,7 +281,7 @@ textarea {
   opacity: 0.3;
 }
 
-/*Promo slider*/
+/*Promo slider on the main page*/
 
 .promo-slide-number {
   font-size: 179px;
@@ -316,7 +331,7 @@ textarea {
   letter-spacing: 0.1em;
 }
 
-/*Catalog overview in index.html*/
+/*Catalog overview on the main page*/
 
 .catalog-parts-item h3 {
   font-size: 18px;
@@ -328,7 +343,7 @@ textarea {
   opacity: 0.3;
 }
 
-/*Services slider*/
+/*Services slider on the main page*/
 
 .service-slide-button {
   font-weight: inherit;
@@ -371,7 +386,7 @@ textarea {
   letter-spacing: 0.1em;
 }
 
-/*About and contacts*/
+/*About and contacts on the main page*/
 
 .about-and-contacts h2 {
   font-size: 47px;
@@ -575,5 +590,224 @@ textarea {
 }
 
 .feedback-submit-button:active {
+  color: var(--basic-black-active);
+}
+
+/*Page title and bread crumbs on the internal page*/
+
+.container h1 {
+  font-size: 47px;
+  line-height: 58px;
+}
+
+.bread-crumbs-link {
+  font-size: 14px;
+  line-height: 19px;
+  opacity: 0.3;
+}
+
+.bread-crumbs-link:hover,
+.bread-crumbs-link:focus {
+  opacity: 0.6;
+}
+
+.bread-crumbs-link:active {
+  opacity: 0.1;
+}
+
+/*Filter panel on the catalog page*/
+
+.filter-title {
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.fieldset-legend {
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.1em;
+}
+
+.color-field-item,
+.bluetooth-field-item {
+  font-size: 14px;
+  line-height: 19px;
+}
+
+.color-field-item:hover,
+.color-field-item:focus,
+.bluetooth-field-item:hover,
+.bluetooth-field-item:focus {
+  /*symbol settings*/
+}
+
+.color-field-item:active,
+.bluetooth-field-item:active {
+  /*symbol settings*/
+}
+
+.color-field-item.disabled,
+.bluetooth-field-item.disabled {
+  color: var(--basic-filter-disabled);
+}
+
+.filter-submit-button {
+  font-weight: inherit;
+  color: inherit;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: none;
+  padding: inherit;
+}
+
+.filter-submit-button:hover,
+.filter-submit-button:focus {
+  /*background settings*/
+}
+
+.filter-submit-button:active {
+  color: var(--basic-black-active);
+}
+
+/*Sorting panel on the catalog page*/
+
+.sort-title {
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.sort-type-button-item button {
+  font-weight: inherit;
+  color: inherit;
+  font-size: 14px;
+  line-height: 19px;
+  background-color: transparent;
+  border: none;
+  padding: inherit;
+  opacity: 0.3;
+}
+
+.sort-type-button-item.checked button {
+  opacity: 1;
+}
+
+.sort-type-button-item button:hover,
+.sort-type-button-item button:focus {
+  opacity: 0.6;
+}
+
+.sort-type-button-item button:active {
+  opacity: 1;
+}
+
+/*Product list section on the catalog page*/
+
+.add-to-cart-button {
+  font-weight: inherit;
+  color: inherit;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: none;
+  padding: inherit;
+}
+
+.add-to-cart-button:hover,
+.add-to-cart-button:focus {
+  /*background settings*/
+}
+
+.add-to-cart-button:active {
+  color: var(--basic-black-active);
+}
+
+.add-to-compare-button {
+  color: inherit;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 0.1em;
+  background-color: transparent;
+  border: none;
+  padding: inherit;
+  opacity: 0.5;
+}
+
+.add-to-compare-button:hover,
+.add-to-compare-button:focus {
+  opacity: 1;
+}
+
+.add-to-compare-button:active {
+  opacity: 0.2;
+}
+
+.product-name {
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.05em;
+}
+
+.product-price {
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 0.05em;
+}
+
+/*Pagination*/
+
+.pagination {
+  background-color: var(--basic-pagination-grey-light);
+}
+
+.pagination a {
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.page-link {
+  opacity: 0.3;
+}
+
+.page-link:hover,
+.page-link:focus {
+  opacity: 0.6;
+}
+
+.page-link:active {
+  opacity: 1;
+}
+
+.page-link.selected {
+  opacity: 1;
+}
+
+.page-back,
+.page-forward {
+  width: 120px;
+  height: 70px;
+  text-align: center;
+  background-color: transparent;
+}
+
+.page-back-link:not(.disabled):hover p,
+.page-back-link:not(.disabled):focus p,
+.page-forward-link:not(.disabled):hover p,
+.page-forward-link:not(.disabled):focus p {
+  background-color: var(--basic-pagination-grey);
+}
+
+.page-back-link:not(.disabled):active p,
+.page-forward-link:not(.disabled):active p {
   color: var(--basic-black-active);
 }

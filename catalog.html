@@ -86,13 +86,13 @@
         <p class="filter-title">фильтр:</p>
         <form action="https://echo.htmlacademy.ru" method="get">
           <fieldset>
-            <legend>Стоимость</legend>
+            <legend class="fieldset-legend">Стоимость</legend>
             <label class="visually-hidden" for="cost-field">Стоимость</label>
             <input type="range" id="cost-field" multiple name="cost" min="0" max="8000" step="10" value="2000">
           </fieldset>
 
           <fieldset>
-            <legend>Цвет</legend>
+            <legend class="fieldset-legend">Цвет</legend>
             <ul class="color-field-list">
               <li class="color-field-item">
                 <label for="color-black-field">Чёрный</label>
@@ -110,15 +110,15 @@
                 <label for="color-red-field">Красный</label>
                 <input type="checkbox" id="color-red-field" name="color-red" checked>
               </li>
-              <li class="color-field-item">
+              <li class="color-field-item disabled">
                 <label for="color-pink-field">Розовый</label>
-                <input type="checkbox" id="color-pink-field" name="color-pink">
+                <input type="checkbox" id="color-pink-field" name="color-pink" disabled>
               </li>
             </ul>
           </fieldset>
 
           <fieldset>
-            <legend>Bluetooth</legend>
+            <legend class="fieldset-legend">Bluetooth</legend>
             <ul class="bluetooth-field-list">
               <li class="bluetooth-field-item">
                 <label for="bluetooth-yes-field">Есть</label>
@@ -131,7 +131,7 @@
             </ul>
           </fieldset>
 
-          <input type="submit" value="Показать">
+          <button class="filter-submit-button" type="submit" value="show">Показать</button>
         </form>
       </section>
 
@@ -140,7 +140,7 @@
           <h2 class="visually-hidden">Сортировка товаров</h2>
           <p class="sort-title">сортировка:</p>
           <ul class="sort-type-button-list">
-            <li class="sort-type-button-item">
+            <li class="sort-type-button-item checked">
               <button class="sort-by-price-button" type="button" value="sort-by-price">По цене</button>
             </li>
             <li class="sort-type-button-item">
@@ -220,19 +220,23 @@
 
         <section class="pagination">
           <h2 class="visually-hidden">Пагинация</h2>
-          <a class="page-back">Назад</a>
-            <ul class="page-link-list">
-              <li class="page-link-item">
-                <a class="link page-link selected">1</a>
-              </li>
-              <li class="page-link-item">
-                <a class="link page-link" href="#">2</a>
-              </li>
-              <li class="page-link-item">
-                <a class="link page-link" href="#">3</a>
-              </li>
-            </ul>
-          <a class="page-forward"></a>
+          <a class="link page-back-link disabled">
+            <p class="page-back">Назад</p>
+          </a>
+          <ul class="page-link-list">
+            <li class="page-link-item">
+              <a class="link page-link selected">1</a>
+            </li>
+            <li class="page-link-item">
+              <a class="link page-link" href="#">2</a>
+            </li>
+            <li class="page-link-item">
+              <a class="link page-link" href="#">3</a>
+            </li>
+          </ul>
+          <a class="link page-forward-link" href="#">
+            <p class="page-forward">Вперёд</p>
+          </a>
         </section>
       </div>
     </div>
