@@ -150,6 +150,20 @@ textarea {
   list-style: none;
 }
 
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+
 /*Header*/
 
 .link .logo-header-image:hover,
@@ -792,22 +806,28 @@ textarea {
   opacity: 1;
 }
 
-.page-back,
-.page-forward {
+.page-back-link,
+.page-forward-link {
+  display: inline-block;
   width: 120px;
   height: 70px;
-  text-align: center;
-  background-color: transparent;
 }
 
-.page-back-link:not(.disabled):hover p,
-.page-back-link:not(.disabled):focus p,
-.page-forward-link:not(.disabled):hover p,
-.page-forward-link:not(.disabled):focus p {
+.page-back,
+.page-forward {
+  text-align: center;
+  margin: 25px auto;
+}
+
+.page-back-link:not(.disabled):hover,
+.page-back-link:not(.disabled):focus,
+.page-forward-link:not(.disabled):hover,
+.page-forward-link:not(.disabled):focus {
   background-color: var(--basic-pagination-grey);
 }
 
-.page-back-link:not(.disabled):active p,
-.page-forward-link:not(.disabled):active p {
+.page-back-link:not(.disabled):active,
+.page-forward-link:not(.disabled):active {
   color: var(--basic-black-active);
 }
+
