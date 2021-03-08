@@ -104,12 +104,32 @@
 
 /*Global*/
 
+.page {
+  height: 100%;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 .page-body {
-  max-width: 1200px;
+  min-width: 1160px;
   margin: 0 auto;
   padding: 0;
   color: var(--basic-black);
   background-color: #f7eadb; /*debug-background*/
+
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+}
+
+.container {
+  width: 1160px;
+  margin: 0 auto;
+  padding: 0;
 }
 
 img {
@@ -609,7 +629,7 @@ textarea {
 
 /*Page title and bread crumbs on the internal page*/
 
-.container h1 {
+.main-content h1 {
   font-size: 47px;
   line-height: 58px;
 }
