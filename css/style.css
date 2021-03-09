@@ -57,7 +57,7 @@
   --modal-grey: #EAEAEA;
 
   --special-yellow-dark: #F0C52E;
-  --special-yellow-light: #F7E296;
+  --special-yellow-light: #f7e296;
 
   --special-green: #91C92F;
   --pink-light: #F6DADA;
@@ -102,7 +102,7 @@
   font-weight: 300;
 }
 
-/*Global*/
+/*Layout*/
 
 .page {
   height: 100%;
@@ -115,7 +115,7 @@
 }
 
 .page-body {
-  min-width: 1160px;
+  width: 1160px;
   margin: 0 auto;
   padding: 0;
   color: var(--basic-black);
@@ -123,14 +123,44 @@
 
   min-height: 100%;
   display: grid;
-  grid-template-rows: min-content 1fr min-content;
+  grid-template-rows: min-content 114px 1fr min-content min-content;
 }
 
-.container {
-  width: 1160px;
-  margin: 0 auto;
-  padding: 0;
+.main-header {
+  grid-row: 1/3;
+  grid-column: 1/-1;
 }
+
+.main-content {
+  grid-row: 2/4;
+  grid-column: 1/-1;
+}
+
+.main-footer {
+  grid-row: 4/5;
+}
+
+.modal form {
+
+}
+
+.personal-menu-and-search {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 40px;
+}
+
+.main-menu-list {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr 1fr;
+}
+
+.main-menu-item:first-child {
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+/*Global*/
 
 img {
   max-width: 100%;
@@ -168,6 +198,8 @@ textarea {
 .product-list,
 .page-link-list {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .visually-hidden {
@@ -193,6 +225,10 @@ textarea {
 
 .link .logo-header-image:active {
   opacity: 0.3;
+}
+
+.main-header {
+  background-color: var(--special-yellow-light);
 }
 
 /*Search form in header*/
@@ -575,7 +611,7 @@ textarea {
 
 /*Feedback form*/
 
-.modal {
+.modal form {
   background-color: var(--basic-white);
 }
 
