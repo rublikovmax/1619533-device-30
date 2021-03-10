@@ -102,64 +102,6 @@
   font-weight: 300;
 }
 
-/*Layout*/
-
-.page {
-  height: 100%;
-}
-
-.clearfix::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.page-body {
-  width: 1160px;
-  margin: 0 auto;
-  padding: 0;
-  color: var(--basic-black);
-  background-color: #f7eadb; /*debug-background*/
-
-  min-height: 100%;
-  display: grid;
-  grid-template-rows: min-content 114px 1fr min-content min-content;
-}
-
-.main-header {
-  grid-row: 1/3;
-  grid-column: 1/-1;
-}
-
-.main-content {
-  grid-row: 2/4;
-  grid-column: 1/-1;
-}
-
-.main-footer {
-  grid-row: 4/5;
-}
-
-.modal form {
-
-}
-
-.personal-menu-and-search {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 40px;
-}
-
-.main-menu-list {
-  display: grid;
-  grid-template-columns: 3fr 1fr 1fr 1fr;
-}
-
-.main-menu-item:first-child {
-  display: grid;
-  grid-template-rows: auto 1fr;
-}
-
 /*Global*/
 
 img {
@@ -215,6 +157,89 @@ textarea {
   overflow: hidden;
 }
 
+/*Page layout*/
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.page {
+  height: 100%;
+}
+
+.page-body {
+  width: 1160px;
+  margin: 0 auto;
+  padding: 0;
+  color: var(--basic-black);
+  background-color: #f7eadb; /*debug-background*/
+
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content min-content 1fr min-content min-content;
+}
+
+.sub-menu {
+  grid-row: 2/3;
+  grid-column: 1/-1;
+  order: 1;
+
+  padding-left: 60px;
+  padding-right: 60px;
+
+  background-color: var(--special-yellow-light);
+
+  visibility: hidden;
+}
+
+.main-content {
+  grid-row: 2/4;
+  grid-column: 1/-1;
+}
+
+/*Header layout*/
+
+.main-header .white-block {
+  background-color: var(--basic-white);
+  width: 100%;
+  height: 40px;
+}
+
+.main-navigation {
+  display: grid;
+  grid-template-rows: 20px 20px 15px min-content min-content;
+}
+
+.main-navigation .white-block {
+  grid-row: 1/3;
+  grid-column: 1/-1;
+}
+
+.logo-header {
+  grid-row: 2/4;
+  grid-column: 1/-1;
+  padding-left: 60px;
+}
+
+.personal-menu-and-search {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 40px;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+.main-menu {
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+.main-menu-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
 
 /*Header*/
 
@@ -327,7 +352,7 @@ textarea {
   opacity: 1;
 }
 
-/*Main menu in header*/
+/*Main and sub menu in header*/
 
 .main-menu-item > a {
   font-size: 18px;
@@ -349,6 +374,17 @@ textarea {
 
 .main-menu-list .link:active {
   opacity: 0.3;
+}
+
+/*Promo slider layout*/
+
+.promo-slide-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 40px;
+
+  padding-left: 60px;
+  padding-right: 60px;
 }
 
 /*Promo slider on the main page*/
