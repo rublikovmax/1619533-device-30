@@ -165,13 +165,17 @@ textarea {
   clear: both;
 }
 
+.container {
+  box-sizing: border-box;
+  width: 1160px;
+  margin: 0 auto;
+}
+
 .page {
   height: 100%;
 }
 
 .page-body {
-  width: 1160px;
-  margin: 0 auto;
   padding: 0;
   color: var(--basic-black);
   background-color: #f7eadb; /*debug-background*/
@@ -387,7 +391,7 @@ textarea {
   padding-right: 60px;
 }
 
-/*Promo slider on the main page*/
+/*Promo slider*/
 
 .promo-slide-number {
   font-size: 179px;
@@ -437,19 +441,92 @@ textarea {
   letter-spacing: 0.1em;
 }
 
-/*Catalog overview on the main page*/
+/*Catalog overview layout*/
+
+.catalog-parts-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  column-gap: 40px;
+
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.catalog-parts-item a {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  row-gap: 38px;
+}
+
+.catalog-parts-image-block {
+  grid-row: 1/2;
+}
+
+/*Catalog overview*/
 
 .catalog-parts-item h3 {
   font-size: 18px;
   line-height: 22px;
   letter-spacing: 0.05em;
+  margin: 0;
 }
 
 .catalog-parts-item:active h3 {
   opacity: 0.3;
 }
 
-/*Services slider on the main page*/
+.catalog-parts-image-block {
+  display: grid;
+
+  width: 160px;
+  height: 160px;
+  background-color: var(--special-yellow-light);
+}
+
+.catalog-part-image {
+  justify-self: center;
+  align-self: center;
+}
+
+/*Services slider layout*/
+
+.services-slider {
+  display: grid;
+  grid-template-rows: auto auto;
+}
+
+.services-slider .background-block {
+  grid-row: 1/3;
+  grid-column: 1/-1;
+}
+
+.services-slider .content-block {
+  grid-row: 1/3;
+  grid-column: 1/-1;
+}
+
+.services-slider .white-block {
+  height: 115px;
+  background-color: var(--basic-white);
+}
+
+.services-slider .lightgray-block {
+  height: 288px;
+  background-color: var(--basic-grey-light);
+}
+
+.services-slider .content-block {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.service-slide-item {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  padding-top: 86px;
+}
+
+/*Services slider*/
 
 .service-slide-button {
   font-weight: inherit;
@@ -492,7 +569,25 @@ textarea {
   letter-spacing: 0.1em;
 }
 
-/*About and contacts on the main page*/
+/*Brands layout*/
+
+.brand-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 40px;
+
+  padding-top: 90px;
+}
+
+/*About and contacts layout*/
+
+.about-and-contacts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 40px;
+}
+
+/*About and contacts*/
 
 .about-and-contacts h2 {
   font-size: 47px;
@@ -550,6 +645,38 @@ textarea {
   color: var(--basic-black-active);
 }
 
+/*Footer layout*/
+
+.main-footer {
+  background-color: var(--basic-dark);
+  padding-top: 46px;
+}
+
+.footer-personal-data {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 40px;
+}
+
+.footer-info {
+  display: grid;
+  grid-template-columns: 3fr 6fr 3fr;
+}
+
+.our-social-networks {
+  display: grid;
+  grid-template-columns: 1fr 10fr 1fr;
+}
+
+.social-network-list {
+  grid-column: 2/3;
+}
+
+.html-academy-logo {
+  grid-column: 3/4;
+  justify-self: right;
+}
+
 /*Footer*/
 
 .link .logo-footer-image:hover,
@@ -565,10 +692,6 @@ textarea {
 }
 
 /*Personal menu in footer*/
-
-.main-footer {
-  background-color: var(--basic-dark);
-}
 
 .main-footer .log-in,
 .main-footer .user-name,
