@@ -768,15 +768,48 @@ textarea {
   opacity: 0.3;
 }
 
-/*Feedback form*/
+/*Feedback form layout*/
+
+.modal {
+  justify-self: center;
+}
 
 .modal form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: min-content min-content min-content;
+  column-gap: 40px;
+
+  box-sizing: border-box;
+  width: 960px;
+  height: 550px;
+  padding: 92px 100px 69px;
   background-color: var(--basic-white);
+}
+
+.message-field-block {
+  grid-column: 1/-1;
+}
+
+.name-field-block,
+.e-mail-field-block,
+.message-field-block {
+  display: grid;
+  grid-template-rows: min-content min-content;
+}
+
+/*Feedback form*/
+
+.modal p {
+  margin: 0;
 }
 
 .feedback-form-label {
   font-size: 18px;
   line-height: 22px;
+  margin-bottom: 10px;
+
+  pointer-events: none;
 }
 
 .feedback-form-field {
@@ -785,6 +818,19 @@ textarea {
   color: var(--basic-black-modal);
   background-color: var(--modal-grey-light);
   border: none;
+
+  box-sizing: border-box;
+  width: 360px;
+  height: 50px;
+  padding: 16px 20px 15px;
+  margin-bottom: 32px;
+}
+
+.textarea-field {
+  width: 760px;
+  height: 167px;
+  margin-bottom: 54px;
+  resize: none;
 }
 
 .feedback-form-field::placeholder {
@@ -810,7 +856,11 @@ textarea {
   text-transform: uppercase;
   background-color: transparent;
   border: none;
-  padding: inherit;
+
+  box-sizing: border-box;
+  width: 200px;
+  height: 22px;
+  padding: 0;
 }
 
 .feedback-submit-button:hover,
