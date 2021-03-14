@@ -70,9 +70,9 @@
   </div>
 
   <main class="main-content">
-    <h1>Моноподы для селфи</h1>
+    <h1 class="internal-page-title container">Моноподы для селфи</h1>
 
-    <ul class="bread-crumbs-list">
+    <ul class="bread-crumbs-list container">
       <li class="bread-crumbs-item">
         <a class="link bread-crumbs-link" href="index.html">Главная</a>
       </li>
@@ -85,9 +85,15 @@
     </ul>
 
     <div class="main-content-zone">
-      <section class="filter">
+      <div class="filter-title-left-space"></div>
+      <div class="filter-panel-left-space"></div>
+      <div class="sort-panel-right-space"></div>
+      <div class="main-product-zone-right-space"></div>
+
+      <p class="filter-title">фильтр:</p>
+
+      <section class="filter-panel">
         <h2 class="visually-hidden">Фильтр товаров</h2>
-        <p class="filter-title">фильтр:</p>
         <form action="https://echo.htmlacademy.ru" method="get">
           <fieldset>
             <legend class="fieldset-legend">Стоимость</legend>
@@ -139,32 +145,32 @@
         </form>
       </section>
 
+      <section class="sort-panel">
+        <h2 class="visually-hidden">Сортировка товаров</h2>
+        <p class="sort-title">сортировка:</p>
+        <ul class="sort-type-button-list">
+          <li class="sort-type-button-item checked">
+            <button class="sort-by-price-button" type="button" value="sort-by-price">По цене</button>
+          </li>
+          <li class="sort-type-button-item">
+            <button class="sort-by-type-button" type="button" value="sort-by-type">По типу</button>
+          </li>
+          <li class="sort-type-button-item">
+            <button class="sort-by-popularity-button" type="button" value="sort-by-popularity">По популярности</button>
+          </li>
+        </ul>
+
+        <ul class="sort-direction-button-list">
+          <li class="sort-direction-button-item">
+            <button class="direct-sort-order-button" type="button" value="direct-sort-order"></button>
+          </li>
+          <li class="sort-direction-button-item">
+            <button class="reverse-sort-order-button" type="button" value="reverse-sort-order"></button>
+          </li>
+        </ul>
+      </section>
+
       <div class="main-product-zone">
-        <section class="sort">
-          <h2 class="visually-hidden">Сортировка товаров</h2>
-          <p class="sort-title">сортировка:</p>
-          <ul class="sort-type-button-list">
-            <li class="sort-type-button-item checked">
-              <button class="sort-by-price-button" type="button" value="sort-by-price">По цене</button>
-            </li>
-            <li class="sort-type-button-item">
-              <button class="sort-by-type-button" type="button" value="sort-by-type">По типу</button>
-            </li>
-            <li class="sort-type-button-item">
-              <button class="sort-by-popularity-button" type="button" value="sort-by-popularity">По популярности</button>
-            </li>
-          </ul>
-
-          <ul class="sort-direction-button-list">
-            <li class="sort-direction-button-item">
-              <button class="direct-sort-order-button" type="button" value="direct-sort-order"></button>
-            </li>
-            <li class="sort-direction-button-item">
-              <button class="reverse-sort-order-button" type="button" value="reverse-sort-order"></button>
-            </li>
-          </ul>
-        </section>
-
         <section class="product-list-section">
           <h2 class="visually-hidden">Перечень моноподов для селфи</h2>
           <ul class="product-list">
@@ -222,7 +228,7 @@
           </ul>
         </section>
 
-        <section class="pagination">
+        <section class="pagination-panel">
           <h2 class="visually-hidden">Пагинация</h2>
           <a class="link page-back-link disabled">
             <p class="page-back">Назад</p>
