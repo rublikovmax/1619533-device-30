@@ -39,6 +39,7 @@
   --basic-black-hover: rgba(0,0,0,0.6);
   --basic-black-active: rgba(0,0,0,0.3);
   --basic-black-modal: rgba(0,0,0,0.4);
+  --basic-black-shadow: rgba(0, 0, 0, 0.15);
   --basic-dark: #363636;
   --basic-grey: #464646;
   --basic-half-grey: #7E7E7E;
@@ -159,6 +160,26 @@ textarea {
 
 /*Page layout*/
 
+.page {
+  height: 100%;
+}
+
+.page-body {
+  min-width: 1200px;
+  padding: 0;
+  color: var(--basic-black);
+  background-color: #f7eadb; /*debug-background*/
+
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content min-content 1fr min-content min-content;
+}
+
+.page-body.catalog-page {
+  display: grid;
+  grid-template-rows: min-content min-content 1fr min-content;
+}
+
 .clearfix::after {
   content: "";
   display: table;
@@ -169,20 +190,6 @@ textarea {
   box-sizing: border-box;
   width: 1160px;
   margin: 0 auto;
-}
-
-.page {
-  height: 100%;
-}
-
-.page-body {
-  padding: 0;
-  color: var(--basic-black);
-  background-color: #f7eadb; /*debug-background*/
-
-  min-height: 100%;
-  display: grid;
-  grid-template-rows: min-content min-content 1fr min-content min-content;
 }
 
 .sub-menu {
@@ -787,6 +794,7 @@ textarea {
   height: 550px;
   padding: 92px 100px 69px;
   background-color: var(--basic-white);
+  box-shadow: 0 10px 16px var(--basic-black-shadow);
 }
 
 .message-field-block {
@@ -1147,7 +1155,7 @@ textarea {
 
 .product-description-block h3 {
   width: 270px;
-  height: 44px;
+  min-height: 44px;
   margin: 0;
 }
 
